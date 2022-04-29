@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta charset="utf-8">
+    <meta name="author" content="Martin">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="stylesheet" href="main.css" type="text/css">
+    <title>RoboVikings</title>
+    <meta name="description" content="First Lego League laget RoboVikings sin nettside">
+    <meta name="keywords" content="sett inn senere">
+    <link rel="icon" href="Favicon.jpg" type="image/gif" sizes="16x16"> <!--Ikonet som vises ved siden av tittelen i nettlseren-->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous"> <!--Ikoner og scial media-->
+  </head>  
+  <body> 
+    <header>
+      <div id="top"> <!--Hele menyen-->
+        <div id="logo"></div> <!--Logoen-->
+        <div id="menu" onmouseleave="closeDropInMenu()"> <!--Lukker Dropdown når menyen lukkes i smalt vindu-modus, og når musen ikke lenger er over dropdown-contetet i bredvindu modus-->
+          <a id="showMenu">Meny</a>
+          <div id="navbar"> <!--Navbar-->
+            <a href="#homeImg">Hjem</a>
+            <a href="#aboutUs">Om oss</a>
+            <a href="#aboutFLL">First Lego League</a>
+            <a href="#followUs">Følg oss</a>
+            <div id="dropdown"> <!--Dropdown-mey inni menyen-->
+              <a id="dropTrig" onclick="dropdown()"><i id="arrow" class="fas fa-angle-double-down"></i>Sponsorer </a> <!--Første del trigger javascriptet på trykk slik at dropdownContent vises. Andre del er ikonet ved siden av knappen "Sponsorer"-->
+              <div id="dropdownContent"> <!-- Innholdet i dropdown-menyen -->
+                <a href="#gold">Gullsponsorer</a>
+                <a href="#silver">Sølvsponsorer</a>
+                <a href="#bronze">Bronsesponsorer</a>
+              </div>
+            </div>
+            <a href="#">Kontakt</a> <!--Knappen under dropdown-menyen -->
+          </div>
+        </div>
+        <div class="iconBar"> <!--Sosiale medier-->
+          <a href="https://www.facebook.com/RobovikingsFLL/?view_public_for=323607451719036" class="facebook" target="_blank"><i class="fab fa-facebook-square"></i></a>
+          <a href="https://www.youtube.com/channel/UCTxqml3VBpMldybwvw1tgWQ" class="youtube" target="_blank"><i class="fab fa-youtube"></i></a>
+        </div>
+      </div>
+    </header>
+    <div id="homeImg" class="content"></div> <!--Bilde på toppen av siden -->
+    <div id="welcome" class="content"> <!-- Teksten under bildet på toppen av siden-->
+      <h1>Velkommen til RoboVikings</h1>
+      <h2>First Lego League - mer enn bare en konkurranse</h2>
+      <p>Når du forestiller deg konkurranse tenker du kanskje at det å vinne er viktigst. Det handler om å holde de kunnskapene du tilegner deg hemmelige,  for at du skal ha fordel ovenfor konkurrentene dine. I FLL er det helt annerledes, for FLL er MYE mer enn en bare en konkurranse.</p>
+      <br>
+      <p>FLL er  er verdens største teknologi- og kunnskapsturnering for barn og unge. Ungdommer fra hele verden deltar i konkurransen, og de beste lagene møtes internasjonale konkurranser. Lagene konkurrerer i  forskning, robotkjøring, teknologi og kjerneverdier.</p>
+      <br>
+      <p>FLL handler om å lære av hverandre,  selv om man er på forskjellige lag.  For det er læringen, samholdet, verdiene og utviklingen som teller, ikke det å vinne.</p>
+    </div>
+    <div id="aboutUs" class="content"> <!-- Om oss seksjon -->
+      <div id="teamPicture" class="right50"><img src="Scandi-Lagbilde.jpg" width="4032" height="3024" ></div>
+      <div id="txtAboutUs" class="left50">
+        <h2>Om Oss</h2>
+        <p>Vi er et fritidslag som består av 4 gutter på 14 og 15 år. Laget vårt består av Anders, Martin, Kristian og Henry. Vi er et lag som består av både erfarne og uerfarne FLL-deltagere. Det er femte sesong  for Martin og Kristian, andre sesong Henry og første sesong for Anders.</p>
+        <p>Martin og Kristian deltok i de tre første sesongene sammen med sin barneskole. De presterte bar i den kategorien de jobbet med, men nådde aldri til topps i alt. I Hydrodynamics sesongen (2017), bestemte de seg for å gjøre det privat. Henry, en venn av Martin, ble med på laget, og sammen med dannet de Four Drops of Water. Martin sitt loft ble brukt som arbeidsrom, og før konkurranser ble familiemiddager uaktuelle, for da skulle robotbordet ned i stua slik at de kunne øve på robot.</p>
+        <p>De vant sammenlagt i Oslo, kom sammenlagt blant topp fire i den Skandinaviske finalen, og utmerket seg i  en internasjonal turnering i USA</p><br>
+      </div> 
+      <div id="txtAboutUsCont">
+        <p>I årets sesong ble Anders med. Vi presterte bedre enn noen sinne. I den Skandinavsike fianlen vant vi 1.plass i både robotkjøring og teknologi, i tillegg til å bli nominert til Championprisen</p>
+        <p>Neste konkurranse som ventet var VM i Detroit. Vi hadde forbedret roboten til å kunne få 97% av alle poengene man kunne få i robotkjøringen (bare noen få lag greide å score denne summen hvert år i en konkurranse). Vi endte opp med en 4.plass i robotkjrøing og en 2.plass i mekanisk design. Vi har nå planer om øke vanskelighetsgraden, og begynne med FTC. Vi vil da bli Skandinavias første lag i konkurransen!</p>
+      </div>
+    </div>
+    <div id="competingYears" class="content">
+      <p id="trophyTxt" onclick="vmTrophy()">Trykk her for å se et nærbilde av pokalen vi vant i VM. Under er et bilde av <b>nesten</b> alle prisene vi har vunnet (et eldre lagmedlem har en teknologipris fra Oslo-mesterskapet. Her er en oversikt;</p>
+      <div class="left50">
+          <ul>
+            <li id="2014">2014 WORLD CLASS</li>
+            <ul>
+              <li>Oslo</li>
+              <ul>
+                <li>Ingen utmerkelser</li>
+              </ul>
+            </ul>
+            <li id="2015">2015 TRASH TREK</li>
+            <ul>
+              <li>Oslo</li>
+              <ul>
+                <li>2.plass robotkjøring</li>
+              </ul>
+            </ul>
+            <li id="2016">2016 ANIMALS ALLIES</li>
+            <ul>
+              <li>Oslo</li>
+              <ul>
+                <li>1.plass robotkjøring</li>
+                <li>1.plass teknologi</li>
+              </ul>
+            </ul>
+            <li id="2017">2017 HYDRO DYNAMICS</li>
+            <ul>
+              <li>Oslo</li>
+                <ul>
+                  <li>1.plass robotkjøring</li>
+                  <li>1.plass markedsføring</li>
+                  <li>Championprisen (sammenlagtpris)</li>
+                </ul>
+                <li>Skandinavisk finale</li>
+                <ul>
+                  <li>Nominasjon til Championpris</li>
+                </ul>
+                <li>FLL Razorback Open Invitational</li>
+                <ul>
+                  <li>4.plass robotkjøring</li>
+                  <li>1.plass mekanisk design</li>
+                </ul>   
+            </ul>
+            <li id="2018">2018 INTO ORBIT</li>
+              <ul>
+                <li>Oslo</li>
+                <ul>
+                  <li>1.plass robotkjøring</li>
+                  <li>Championpris</li>
+                </ul>
+                <li>Skandinavisk finale</li>
+                <ul>
+                  <li>Nominasjon til Championpris</li>
+                  <li>1.plass robotkjøring</li>
+                  <li>1.plass teknologi</li>
+                </ul>
+                <li>FLL World festival Detroit</li>
+                <ul>
+                  <li>4.plass robotkjøring</li>
+                  <li>2.plass mekanisk design</li>
+                </ul>   
+            </ul>
+          </ul>
+        </div>
+        <div id="allTrophies" class="right50"><img src="allePokaler.jpg" width="4128" height="3096"></div>
+        <div id="vmTrophy" class="right50" style="display: none;"><img src="vmPokal.jpg"></div>
+    </div>
+    <div id="slideShow">
+      <div class="slideDescription">Razorback Open Invitational</div>
+      <div class="slide">
+        <img src=slide1.jpg>
+        <div class="slideDescription">Roboten</div>
+      </div> 
+      <div class="slide">
+        <img src=slide2.jpg>
+        <div class="slideDescription">Diskusjon med dommere</div>
+      </div> 
+      <div class="slide">
+        <img src=slide3.jpg>
+        <div class="slideDescription">Åpningsermoni</div>
+      </div> 
+      <div class="slide">
+        <img src=slide4.jpg>
+        <div class="slideDescription">Feilsøking</div>
+      </div> 
+      <div class="slide">
+        <img src=slide5.jpg>
+        <div class="slideDescription">1. plass mekanisk design</div>
+      </div> 
+      <div class="slide">
+        <img src=slide6.jpg>
+        <div class="slideDescription">Premieutdeling</div>
+      </div>
+        
+    </div>
+      
+    <div id="aboutFLL" class="content">
+      <div id="project">
+        <div class="left50"><img src="Astronaut.png"></div>
+        <div class="right50">
+          <h2>Prosjekt</h2>
+          <p>I denne delen av FLL skal man forske på et verdensaktuelt problem. Temaet er nytt hvert år, og lagene skal lage en innovativ løsning til problemet de identifiserer.   Temaer opp gjennom årene har vært søppel, vann, eldreomsorg. I årets sesong het temaet "Into Orbit". Her skulle man forske på romfart </p>
+        </div>
+      </div>
+      <div id="technology">
+          <video class="right50" width="1280" height="720" id="BestDetroit" controls>
+            <source src="FLL%20Into%20Orbit%20_%20RoboVikings%20356%20points%20_%20WF%20Detroit.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+          </video> 
+        <div class="left50">
+          <h2>Teknologi</h2>
+          <p>I denne delen av FLL skal man forske på et verdensaktuelt problem. Temaet er nytt hvert år, og lagene skal lage en innovativ løsning til problemet de identifiserer.   Temaer opp gjennom årene har vært søppel, vann, eldreomsorg. I årets sesong het temaet "Into Orbit". Her skulle man forske på romfart </p>
+        </div>
+      </div>
+      <div id="coreValues">
+        <div id="coreValuesImg" ><img class="left50" src="kjerneverdier.png" width="1200" height="1200" ></div>
+        <div class="right50">
+          <h2>Kjerneverdier</h2>
+          <p>Oppdagelse: Vi utforsker nye kunnskaper og idéer.</p>
+          <p>Innovasjon: Vi bruker kreativitet og utholdenhet for å løse problemer.</p>
+          <p>Innvirkning:  Vi bruker det vi lærer til å forbedre verden.</p>
+          <p>Inkludering: Vi respekterer hverandre og omfavner våre ulikheter.</p>
+          <p>Lagarbeid: Vi er sterkere når vi arbeider sammen.</p>
+          <p>Moro: Vi har det gøy!</p>
+          <p>Dette er kjerneverdiene i FLL. Disse utrykker filosfien til FIRST: Gracious Professionalism og Coopertition . Dette er to begreper som handler om hvordan man burde lære, vennlig og hyggelig konkurranse og om balansen mellom å konkurrere og samarbeide på tvers av lag.</p>
+        </div>
+      </div>
+    </div>
+    <!--Mulig utvidelse<div id="followUs" class="content">
+    </div>-->
+    <div id="sponsors" class="content">
+      <div class="sponsorHeader">
+        <h1>Sponsorene våre</h1>
+        <h2>De som har gjort First Lego League mulig for oss</h2>
+      </div>
+      <div id="gold">
+        <div class="sponsorHeader"><h3>Gullsponsorer</h3></div>
+        <div class="inLine"> <!--Hver linje med bilder er lagt inn i en div (markert med classen inline) for at bildene på linjen skal begynne på samme høyde. Hvis ikke vil noen bilder begynne høyere enn andre fordi  over er lavt-->
+        	<a href="https://rd-datarespons.no/" target="_blank">
+          	<div class="left33" >
+            	<img src="Datarespons-svart.jpg" width="750" height="600">
+            	<div class="sponsorDescription"><h3>Datarespons</h3></div>
+          	</div> 
+        	</a>
+        	<a href="https://www.nordea.no" target="_blank">
+          	<div class="middle33">
+            	<img src="Nordea-Bank.png" width="280" height="280">
+            	<div class="sponsorDescription"><h3>Nordea</h3></div>
+          	</div>
+        	</a>    
+        	<a href="https://www.tekna.no" target="_blank">
+          	<div class="right33">
+            	<img src="Tekna.jpg" width="280" height="280">
+            	<div class="sponsorDescription"><h3>Tekna</h3></div>
+          	</div>
+        	</a>
+        </div>
+        <div class="inline">
+        	<a href="https://www.equinor.no" target="_blank">
+          	<div class="middle33">
+            	<img src="Equinor_PRIMARY_logo_RGB_BLACK.jpg" width="1638" height="1429">
+							<div class="sponsorDescription"><h3>Equinor</h3></div>
+          	</div>
+        	</a>
+      	</div>
+      </div>
+      <div id="silver">
+        <div class="sponsorHeader"><h3>Sølvsponsorer</h3></div>
+        <div class="inline">
+        	<a href="https://www.abb.no" target="_blank">
+          	<div class="right50">
+            	<img src="thumbnail_ABB_Logo_Print_4C_sponsorlogo.jpg" width="428" height="236">
+            	<div class="sponsorDescription"><h3>ABB</h3></div>
+          	</div>
+        	</a>
+        	<a href="https://www.vipps.no" target="_blank">
+          	<div class="left50">
+            	<img src="vipps.png" width="1921" height="778">
+            	<div class="sponsorDescription"><h3>Vipps</h3></div>
+          	</div>
+        	</a>
+        </div>
+      </div>
+      <div id="bronze">
+        <div class="sponsorHeader"><h3>Bronsesponsorer</h3></div>
+        <div class="inline">
+        	<a href="https://www.geodata.no" target="_blank">
+          	<div class="left50">
+            	<img src="Geodata.png" width="1755" height="921">
+            	<div class="sponsorDescription"><h3>Geodata</h3></div>
+          	</div>
+        	</a>
+        	<a href="https://www.narom.no/" target="_blank">
+          	<div class="right50">
+            	<img src="Narom.jpg" width="944" height="229">
+            	<div class="sponsorDescription"><h3>Narom</h3></div>
+          	</div>
+        	</a>
+        </div>
+        <div class="inline">
+        	<a href="https://www.creative3d.no" target="_blank">
+          	<div class="right33">
+            	<img src="Creative3D.png" width="874" height="661">
+            	<div class="sponsorDescription"><h3>Creative 3d</h3></div>
+          	</div>
+        	</a>
+        	<a>
+          	<div class="middle33">
+            </div>
+					</a>
+        	<a href="https://no.rs-online.com/web/" target="_blank">
+          	<div class="left33">
+							<img src="RS_logo_rgb_high_res_small.jpg" width="189" height="163">
+            	<div class="sponsorDescription"><h3>Rs components</h3></div>
+          	</div>
+        	</a>
+        </div>
+        <div class="inline">
+        	<a href="https://3dnet.no" target="_blank">
+          	<div class="right50">
+            	<img src="3dNet.png" width="410" height="112">
+            	<div class="sponsorDescription"><h3>3dNet</h3></div>
+          	</div>
+        	</a>
+        	<a href="https://www.mv-nordic.com/no/" target="_blank">
+          	<div class="left50">
+            	<img src="MvNordic.jpg" width="200" height="47">
+            	<div class="sponsorDescription"><h3>Geodata</h3></div>
+          	</div>
+        	</a>
+        </div>
+      </div>
+    </div>
+    <footer> <!--Footer-->
+      <div>
+				<div class="right33">
+          <p>&copy; 2019 Martin Ansteensen</p>
+        </div>
+        <div class="left33">
+          <p>Made by: Martin Ansteensen</p>
+        </div>
+        <div class="middle33">
+          <p>Contact information: <a href="maana001@osloskolen.no">maana001@osloskolen.no</a></p>
+        </div>
+      </div>
+    </footer>
+    <script src="script.js"></script> <!--Linker til javascriptet-->
+  </body>
+</html>
+
