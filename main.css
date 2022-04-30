@@ -5,7 +5,8 @@ body, html{
   margin: 0;
   width: 100%;
   padding: 0%;
-  /*background-color: #1E2A4B; */
+  overflow-wrap: break-word;
+
 }
 /*Standarder*/
 body h1{
